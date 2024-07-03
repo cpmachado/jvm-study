@@ -1,0 +1,29 @@
+openapi: 3.0.0
+servers:
+  - url: http://127.0.0.1:8080
+info:
+  description: >-
+    Simple project to test Spring Boot with kotlin
+  version: 1.0.0
+  title: Quickstart
+paths:
+  /hello:
+    get:
+      summary: Gets a hello greeting
+      description: Retrieves a hello greeting with a default "World" or a name
+      operationId: getHello
+      parameters:
+        - name: name
+          in: query
+          description: A name
+          required: false
+          schema:
+            type: string
+            example: Carlos
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/text:
+              type: string
+              example: "Hello world"
