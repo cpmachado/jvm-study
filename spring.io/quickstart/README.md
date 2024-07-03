@@ -2,5 +2,5 @@
 
 Quickstart tutorial adapted to kotlin.
 
-title: "Spring Quickstart Guide"
-URL: <https://spring.io/quickstart>
+- title: "Spring Quickstart Guide"
+- url: <https://spring.io/quickstart>
