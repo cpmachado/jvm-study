@@ -2,8 +2,9 @@ package com.example.demo
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
-import org.springframework.jdbc.core.JdbcTemplate
-import org.springframework.jdbc.core.query
+import org.springframework.data.annotation.Id
+import org.springframework.data.relational.core.mapping.Table
+import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Service
 import org.springframework.web.bind.annotation.*
 import java.util.*
@@ -21,8 +22,7 @@ class MessageController(val service: MessageService) {
     fun index() = service.findMessages()
 
     @GetMapping("/{id}")
-    fun index(@PathVariable id: String): List<Message> =
-        service.findMessageById(id)
+    fun index(@PathVariable id: String): List<Message> = service.findMessageById(id)
 
     @PostMapping("/")
     fun post(@RequestBody message: Message) {
@@ -30,23 +30,20 @@ class MessageController(val service: MessageService) {
     }
 }
 
-data class Message(val id: String?, val text: String)
+@Table("MESSAGES")
+data class Message(@Id var id: String?, val text: String)
 
 @Service
-class MessageService(val db: JdbcTemplate) {
-    fun findMessages(): List<Message> = db.query("SELECT * FROM messages") { response, _ ->
-        Message(response.getString("id"), response.getString("text"))
-    }
+class MessageService(val db: MessageRepository) {
+    fun findMessages(): List<Message> = db.findAll().toList()
 
-    fun findMessageById(id: String): List<Message> =
-        db.query("SELECT * FROM messages WHERE id = ?", id) { response, _ ->
-            Message(response.getString("id"), response.getString("text"))
-        }
+    fun findMessageById(id: String): List<Message> = db.findById(id).toList()
 
     fun save(message: Message) {
-        val id = message.id ?: UUID.randomUUID().toString()
-        db.update(
-            "INSERT INTO messages VALUES (?, ?)", id, message.text
-        )
+        db.save(message)
     }
+
+    fun <T : Any> Optional<out T>.toList(): List<T> = if (isPresent) listOf(get()) else emptyList()
 }
+
+interface MessageRepository : CrudRepository<Message, String>
