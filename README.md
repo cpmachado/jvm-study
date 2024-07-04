@@ -1,6 +1,7 @@
-# spring-boot-study
+# jvm-study
 
-My way through spring boot tutorials and study material, in Kotlin.
+My way through studying JVM based technologies, with focus on Spring Boot and Kotlin.
 
 Directories:
 - [spring.io](spring.io)
+- [kotlinlang.org](kotlinlang.org)
