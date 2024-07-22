@@ -3,8 +3,8 @@ files:
   - name: src/Task.kt
     visible: true
     placeholders:
-      - offset: 116
-        length: 6
+      - offset: 108
+        length: 37
         placeholder_text: TODO()
         initial_state:
           length: 6
@@ -12,9 +12,9 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: bHbWHlbXnNTk7UiRFBJcBx27lg4R5GtuqVPHvPvi6gFlwSjEuBCWMVdPLTRL4kUp
         selected: false
-        status: Unchecked
-      - offset: 231
-        length: 6
+        status: Solved
+      - offset: 246
+        length: 39
         placeholder_text: TODO()
         initial_state:
           length: 6
@@ -22,17 +22,17 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: bHbWHlbXnNTk7UiRFBJcByGklhlj8USJqlS5maPcq3q3gRffHRSF/cCpVYyUTH98
         selected: false
-        status: Unchecked
-      - offset: 353
-        length: 6
+        status: Solved
+      - offset: 393
+        length: 46
         placeholder_text: TODO()
         initial_state:
           length: 6
           offset: 353
         initialized_from_dependency: false
         encrypted_possible_answer: bHbWHlbXnNTk7UiRFBJcB5Vo/MzVnbazCaSar7kh+p5YRpaUPgyuwek3ua02djHY
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: test/Tests.kt
     visible: false
@@ -44,5 +44,8 @@ files:
     visible: false
     learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSeYool5qTz-p77fzn_9UKQVjO3u3Al6WjzEyW5cbjspRwtQig/viewform?usp=pp_url&entry.2103429047=Collections+/+Associate
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 22 Jul 2024 20:09:53 UTC"
 record: -1
