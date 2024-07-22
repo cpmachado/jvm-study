@@ -4,17 +4,17 @@ files:
     visible: true
     placeholders:
       - offset: 115
-        length: 6
+        length: 137
         placeholder_text: TODO()
         initial_state:
           length: 6
           offset: 115
         initialized_from_dependency: false
         encrypted_possible_answer: +rdClDEwRh9bBN7rog+OHHOfUhSrnhrPk5wOJMBiVbMveOjpVAHHZDJlz84oh6je9iblUxtNK2UwwfqB2xjwZefroD6JqItM2qIUQM8BX5gb7l5nxY5fEy+HExHfpZBsbxv1FBRfmxNMjzJzFJxPAXw/ZwdFlsjaEMFgbX/qQi4kuTpU1i2YjMYSMEOh63Qy
-        selected: false
-        status: Unchecked
-      - offset: 177
-        length: 6
+        selected: true
+        status: Solved
+      - offset: 308
+        length: 39
         placeholder_text: TODO()
         initial_state:
           length: 6
@@ -22,7 +22,7 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: ZocLMxe+VftzD4HmgfaVO+rlo3f7oTnP+hMx23Y+gSMWWobHH1tUYzCx9p3Xse+D
         selected: false
-        status: Unchecked
+        status: Solved
     learner_created: false
   - name: src/Shop.kt
     visible: true
@@ -33,5 +33,8 @@ files:
   - name: test/TestShop.kt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 22 Jul 2024 20:31:31 UTC"
 record: -1
